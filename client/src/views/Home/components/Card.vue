@@ -56,16 +56,16 @@ export default {
         TODO.splice(this.index, 1)
         this.$store.commit('SET_TODO', TODO)
         if (direction === 'right') {
-          const DONE = [...this.$store.state.post.done]
-          this.$store.commit('SET_DONE', [this.todo, ...DONE])
+          const ONPROGRESS = [...this.$store.state.post.onProgress]
+          this.$store.commit('SET_ONPROGRESS', [this.todo, ...ONPROGRESS])
         } else {
           const BACKLOG = [...this.$store.state.post.backlog]
           this.$store.commit('SET_BACKLOG', [this.todo, ...BACKLOG])
         }
-      } else if (this.category === 'Done') {
-        const DONE = [...this.$store.state.post.done]
-        DONE.splice(this.index, 1)
-        this.$store.commit('SET_DONE', DONE)
+      } else if (this.category === 'On Progress') {
+        const ONPROGRESS = [...this.$store.state.post.onProgress]
+        ONPROGRESS.splice(this.index, 1)
+        this.$store.commit('SET_ONPROGRESS', ONPROGRESS)
         if (direction === 'right') {
           const COMPLETED = [...this.$store.state.post.completed]
           this.$store.commit('SET_COMPLETED', [this.todo, ...COMPLETED])
@@ -77,8 +77,8 @@ export default {
         const COMPLETED = [...this.$store.state.post.completed]
         COMPLETED.splice(this.index, 1)
         this.$store.commit('SET_COMPLETED', COMPLETED)
-        const DONE = [...this.$store.state.post.done]
-        this.$store.commit('SET_DONE', [this.todo, ...DONE])
+        const ONPROGRESS = [...this.$store.state.post.onProgress]
+        this.$store.commit('SET_ONPROGRESS', [this.todo, ...ONPROGRESS])
       }
     },
     edit () {

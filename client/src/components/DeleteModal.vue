@@ -37,10 +37,10 @@ export default {
         const TODO = [...this.$store.state.post.todo]
         TODO.splice(index, 1)
         this.$store.commit('SET_TODO', TODO)
-      } else if (category === 'Done') {
-        const DONE = [...this.$store.state.post.done]
-        DONE.splice(index, 1)
-        this.$store.commit('SET_DONE', DONE)
+      } else if (category === 'On Progress') {
+        const ONPROGRESS = [...this.$store.state.post.onProgress]
+        ONPROGRESS.splice(index, 1)
+        this.$store.commit('SET_ONPROGRESS', ONPROGRESS)
       } else {
         const COMPLETED = [...this.$store.state.post.completed]
         COMPLETED.splice(index, 1)

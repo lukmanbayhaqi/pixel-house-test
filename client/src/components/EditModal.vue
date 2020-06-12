@@ -65,14 +65,14 @@ export default {
           payload
         )
         this.$store.commit('SET_TODO', TODO)
-      } else if (category === 'Done') {
-        const DONE = [...this.$store.state.post.done]
-        DONE.splice(
+      } else if (category === 'On Progress') {
+        const ONPROGRESS = [...this.$store.state.post.onProgress]
+        ONPROGRESS.splice(
           index,
           1,
           payload
         )
-        this.$store.commit('SET_DONE', DONE)
+        this.$store.commit('SET_ONPROGRESS', ONPROGRESS)
       } else {
         const COMPLETED = [...this.$store.state.post.completed]
         COMPLETED.splice(

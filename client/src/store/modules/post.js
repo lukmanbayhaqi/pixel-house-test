@@ -4,7 +4,7 @@ const post = {
   state: {
     backlog: [],
     todo: [],
-    done: [],
+    onProgress: [],
     completed: [],
     loading: false
   },
@@ -15,8 +15,8 @@ const post = {
     SET_TODO (state, payload) {
       state.todo = payload
     },
-    SET_DONE (state, payload) {
-      state.done = payload
+    SET_ONPROGRESS (state, payload) {
+      state.onProgress = payload
     },
     SET_COMPLETED (state, payload) {
       state.completed = payload
@@ -32,7 +32,7 @@ const post = {
         .then(({ data }) => {
           commit('SET_BACKLOG', data.slice(1, 25))
           commit('SET_TODO', data.slice(26, 50))
-          commit('SET_DONE', data.slice(51, 75))
+          commit('SET_ONPROGRESS', data.slice(51, 75))
           commit('SET_COMPLETED', data.slice(76, 100))
         })
         .catch(console.log)

@@ -24,16 +24,6 @@ import Destroy from '@/components/DeleteModal.vue'
 
 export default {
   name: 'Home',
-  data () {
-    return {
-      categories: [
-        'Backlog',
-        'Todo',
-        'Done',
-        'Completed'
-      ]
-    }
-  },
   created () {
     this.$store.dispatch('fetchPost')
   },
@@ -42,7 +32,7 @@ export default {
       return [
         ['Backlog', this.$store.state.post.backlog],
         ['Todo', this.$store.state.post.todo],
-        ['Done', this.$store.state.post.done],
+        ['On Progress', this.$store.state.post.onProgress],
         ['Completed', this.$store.state.post.completed]
       ]
     },
