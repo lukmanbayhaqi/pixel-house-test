@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.ui.menu {
+  margin: 0;
+}
+
+.home {
+  width: 100vw;
+  height: 90vh;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home .categories {
+  width: 20vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 1vw;
+}
+
+.home .categories .header {
+  margin-bottom: 2vh;
+}
+
+.home .categories .body {
+  max-height: 60vh;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.ui.card > .extra, .ui.cards > .card > .extra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui.modal {
+  width: 35vw;
+}
+
+.ui.modal > .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.destroy-content {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-navbar {
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-left: 5vw !important;
+  margin-bottom: 0;
+}
+
+.destroy .ui.modal {
+  width: 30vw;
+}
+
+.button-create-navbar {
+  margin-left: 1vw !important;
+}
+
+.btn-group {
+  width: 100%;
+  display: flex !important;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-group .button:first-child, .btn-group .button:last-child {
+  margin: 0 2vw !important;
+}
