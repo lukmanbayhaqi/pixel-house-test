@@ -47,6 +47,8 @@ export default {
       this.$store.commit('SET_BACKLOG', [payload, ...BACKLOG])
       this.$store.commit('SET_CREATE')
       this.$vToastify.success('Success create kanban')
+      this.title = ''
+      this.body = ''
     }
   }
 }
