@@ -49,11 +49,15 @@ function customSortDesc(arr) {
   return result.join(',');
 }
 
+const a = [10, 9, 102, 66, 5421, 1, 0]
+const b = ['Wulan', 'Raharjo', 'Widya', 'Yuda', 'Cinta', 'Iskandar', 'Hidayat', 'Kusuma', 'Indah', 'Jusuf']
+const c = ['Wulan', 'Raharjo', 'Widya', 10, 9, 102, 66, 5421, 1, 0, 'Yuda', 'Cinta', 'Iskandar', 'Hidayat', 'Kusuma', 'Indah', 'Jusuf']
+
 console.log('====Ascending====')
-console.log(customSortAsc([10, 9, 102, 66, 5421, 1, 0]));
-console.log(customSortAsc(['Wulan', 'Raharjo', 'Widya', 'Yuda', 'Cinta', 'Iskandar', 'Hidayat', 'Kusuma', 'Indah', 'Jusuf']));
-console.log(customSortAsc(['Wulan', 'Raharjo', 'Widya', 10, 9, 102, 66, 5421, 1, 0, 'Yuda', 'Cinta', 'Iskandar', 'Hidayat', 'Kusuma', 'Indah', 'Jusuf']));
+console.log(customSortAsc(a));
+console.log(customSortAsc(b));
+console.log(customSortAsc(c));
 console.log('====Descending====')
-console.log(customSortDesc([10, 9, 102, 66, 5421, 1, 0]));
-console.log(customSortDesc(['Wulan', 'Raharjo', 'Widya', 'Yuda', 'Cinta', 'Iskandar', 'Hidayat', 'Kusuma', 'Indah', 'Jusuf']));
-console.log(customSortDesc(['Wulan', 'Raharjo', 'Widya', 10, 9, 102, 66, 5421, 1, 0, 'Yuda', 'Cinta', 'Iskandar', 'Hidayat', 'Kusuma', 'Indah', 'Jusuf']));
+console.log(customSortDesc(a));
+console.log(customSortDesc(b));
+console.log(customSortDesc(c));
