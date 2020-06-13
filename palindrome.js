@@ -3,7 +3,10 @@ function palindrome(num) {
   let arr = []
 
   for (let i = 0; i < Math.ceil(num / 2) ; i++) {
-    let random = Math.floor(Math.random() * (122 - 65 + 1) + 65)
+    let random = Math.floor(Math.random() * (122 - 48 + 1) + 48)
+    if (random > 57 && random < 65) {
+      random = Math.floor(Math.random() * (122 - 65 + 1) + 65)
+    }
     if (random > 90 && random < 97) {
       random = Math.floor(Math.random() * (122 - 97 + 1) + 97)
     }
